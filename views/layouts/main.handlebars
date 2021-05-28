@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tech Blog</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {{#if logged_in}}
+            <a href="#"><h4>Home</h4></a>
+            <a href="#"><h4>Dashboard</h4></a>
+            <a href="#"><h4>Logout</h4></a>
+            {{else}}
+            <a href="#"><h4>Home</h4></a>
+            <a href="#"><h4>Login</h4></a>
+            {{/else}}
+            {{/if}}
+        </nav>
+        <h1>The Tech Blog</h1>
+    </header>
+</body>
+</html>
