@@ -1,0 +1,47 @@
+[
+    {
+    "title": "Need help with this homework",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "1"
+    },
+    {
+    "title": "Not sure how to align these two divs properly",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "1"
+    },
+    {
+    "title": "Does anyone know a good resource on responsvie design?",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "1"
+    },
+    {
+    "title": "Not sure why I can't do a git pull",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "2"
+    },
+    {
+    "title": "My javascript isn't working!!",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "2"
+    },
+    {
+    "title": "I feel like the next homework is going to be a doozy. Anyone want to meet up and study?",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "2"
+    },
+    {
+    "title": "No matter what I try, my server won't connect. Any help would be appreciated.",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "3"
+    },
+    {
+    "title": "Anyone else not able to log in to bootcampspot?",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "3"
+    },
+    {
+    "title": "Just want to say thanks to all the teachers and tutors!",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, magnam. Modi ducimus, cumque magni sapiente hic vel obcaecati! Ad distinctio aliquid debitis esse quod assumenda optio enim dolores reprehenderit alias?",
+    "user_id": "3"
+    }
+  ]

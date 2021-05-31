@@ -41,7 +41,7 @@ nav a {
     padding: 10px;
 }
 
-.test {
+.background {
     position: absolute;
     bottom: 25px;
     background-color: var(--gray);
