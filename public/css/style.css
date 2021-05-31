@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brown: #221010;
+    --light-green: #D9E9D3;
+    --gray: #A7A7A7;
+}
+
+header {
+    background-color: var(--brown);
+    padding-bottom: 30px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    margin: 15px;
+    color: var(--light-green);
+}
+
+.title {
+    color: var(--brown);
+    background-color: var(--light-green);
+    width: 25%;
+    text-align: center;
+    margin-left: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.title h1 {
+    padding: 10px;
+}
+
+.test {
+    position: absolute;
+    bottom: 25px;
+    background-color: var(--gray);
+    height: 57px;
+    z-index: 1;
+    border-radius: 10px;
+    width: 25%;
+    margin-left: 35px;
+}
