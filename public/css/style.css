@@ -78,6 +78,15 @@ body {
     color: var(--light-green);
 }
 
+.post-title a {
+    text-decoration: none;
+    color: var(--light-green)
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
 .post-content {
     padding: 10px;
     color: var(--brown);
