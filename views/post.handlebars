@@ -9,3 +9,25 @@
         </div>
     </div>
 </div>
+
+<div class="create-comment-container">
+    <div class="comment-header"></div>
+    <div class="create-comment-body">
+        <p>Comment</p>
+        <textarea name="" id="" cols="30" rows="5"></textarea>
+        <div class="comment-submit-box">
+            <button class="comment-submit-btn">Submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="all-comments">
+    <div class="comment-header"></div>
+    {{#each posts.comments as |comment|}}
+    <div class="comment">
+        <p>{{comment.content}}</p>
+        <br>
+        <p>-User, {{comment.date_created}}</p>
+    </div>
+    {{/each}}
+</div>

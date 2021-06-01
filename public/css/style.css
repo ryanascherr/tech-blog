@@ -73,6 +73,7 @@ body {
 .post-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
     background-color: var(--brown);
     color: var(--light-green);
@@ -90,4 +91,56 @@ body {
 .post-content {
     padding: 10px;
     color: var(--brown);
+}
+
+.create-comment-container, .all-comments {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 30px auto;
+    border: 3px solid var(--brown);
+}
+
+.create-comment-body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.create-comment-container p {
+    margin: 10px auto;
+    font-size: x-large;
+}
+
+.create-comment-body textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: x-large;
+}
+
+.comment-header {
+    background-color: var(--brown);
+    height: 42px;
+}
+
+.comment-submit-box {
+    margin: 15px auto;
+}
+
+.comment-submit-btn {
+    width: 100%;
+    background-color: gray;
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.all-comments {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.comment {
+    margin: 20px;
 }
