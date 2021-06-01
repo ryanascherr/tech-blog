@@ -93,7 +93,7 @@ body {
     color: var(--brown);
 }
 
-.create-comment-container, .all-comments {
+.create-comment-container, .all-comments, .login-signup-container {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -126,7 +126,7 @@ body {
     margin: 15px auto;
 }
 
-.comment-submit-btn {
+.comment-submit-btn, .login-signup-btn {
     width: 100%;
     background-color: gray;
     color: white;
@@ -144,3 +144,43 @@ body {
 .comment {
     margin: 20px;
 }
+
+.login-signup-header {
+    background-color: var(--brown);
+    color: var(--light-green);
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.login-signup-container input {
+    border: none;
+    font-size: larger;
+    width: 100%;
+    padding: 10px;
+}
+
+.login-signup-body {
+    margin: 10px 15px;
+}
+
+.login-signup-body div {
+    margin-bottom: 20px;
+}
+
+.login-signup-body p {
+    font-size: x-large;
+}
+
+.login-signup-body a {
+    color: var(--brown);
+    font-size: x-large;
+}
+
+/* .login-signup-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: x-large;
+    border: none;
+    background-color: gray;
+} */
