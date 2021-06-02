@@ -131,7 +131,7 @@ button:hover {
     margin: 15px auto;
 }
 
-.comment-submit-btn, .login-signup-btn {
+.comment-submit-btn, .login-btn, .signup-btn {
     width: 100%;
     background-color: gray;
     color: white;
@@ -189,3 +189,15 @@ button:hover {
     border: none;
     background-color: gray;
 } */
+
+.hidden {
+    display: none;
+}
+
+.go-to-signup, .go-to-login {
+    text-decoration: underline;
+}
+
+.go-to-signup:hover, .go-to-login:hover {
+    cursor: pointer;
+}
