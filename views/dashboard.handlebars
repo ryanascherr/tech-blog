@@ -23,6 +23,27 @@
     </div>
 </div>
 
+<div class="edit-delete-post-parent hidden">
+    <div class="login-signup-container">
+        <div class="login-signup-header">
+            <h2>Edit Post</h2>
+        </div>
+        <div class="login-signup-body">
+            <div class="username">
+                <p>Title</p>
+                <input type="text" class="username-signup new-post-title">
+            </div>
+            <div class="password">
+                <p>Content</p>
+                <textarea name="" id="" cols="30" rows="5" class="password-signup new-post-content new-post-content"></textarea>
+            </div>
+            <div class="login-signup-box">
+                <button class="signup-btn create-new-post">Create!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="all-posts">
     <div class="post-title">
         <h2>Posts</h2>
@@ -30,7 +51,7 @@
     {{#each posts as |post|}}
     <div class="previous-post">
         <div class="previous-post-title">
-            <a href="/post/{{post.id}}"><p>{{post.title}}</p></a>
+            <a class="click" data-id="{{id}}" href="#"><p>{{post.title}}</p></a>
         </div>
         <div class="previous-post-user">
             <p class="italic">{{post.date_created}}</p>

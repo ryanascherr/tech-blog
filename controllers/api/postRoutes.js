@@ -23,14 +23,14 @@ router.get('/:id', async (req, res) => {
 
 
 //post route to create new issues, this is for logged in users only
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const newPost = Post.create({
+    const newPost = await Post.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-
-    res.status(200).json(newPost);
+    const post = newPost.get({ plain: true });
+    res.status(200).json(post);
   } catch (err) {
     res.status(400).json(err);
   }

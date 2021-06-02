@@ -72,10 +72,17 @@ router.get('/post/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['content', 'date_created']
+          attributes: ['content', 'date_created', 'user_id'],
+          include: [
+            {
+            model: User,
+            attributes: ['username'],
+            }
+          ]
         }
       ]
     });
+
     if (!postData) {
       res.status(404).json({ message: 'No post found with this id!'});
       return;

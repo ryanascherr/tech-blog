@@ -1,6 +1,6 @@
 const submitBtn = $(".create-new-post");
-
-submitBtn.click(function(e) {
+//make async
+submitBtn.click(async (e) => {
     e.preventDefault();
     
     if ($(".new-post-title").val() == "" || $(".new-post-content").val() == "") {
@@ -14,12 +14,16 @@ submitBtn.click(function(e) {
     console.log(title);
     console.log(content);
 
-    const response = fetch('/api/posts', {
+    const response = await fetch('/api/posts', {
         method: 'POST',
         body: JSON.stringify({ title, content }),
         headers: { 'Content-Type': 'application/json' },
-      });
-      document.location.replace('/');
+    })
+
+      
+      const data = await response.json();
+      document.location.replace(`/post/${data.id}`);
+      // console.log(data);
     //This works, but not like it should. Need to look into this later.
     //   if (response.ok) {
     //     document.location.replace('/');
@@ -31,3 +35,10 @@ submitBtn.click(function(e) {
 $(".new-post-btn").click(function() {
     $(".new-post-parent").removeClass("hidden");
   })
+
+$(".click").click(function() {
+    postId = this.getAttribute('data-id');
+    console.log(postId);
+
+
+})
