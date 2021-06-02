@@ -35,6 +35,15 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/dashboard', (req, res) => {
+  //If the user is already logged in, redirect them to the homepage (homepage.handlebars)
+  if (!req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+  res.render('dashboard');
+});
+
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
