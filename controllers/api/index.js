@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const postRoutes = require('./postRoutes');
-const commentRoutes = require('./commentRoutes')
+const commentRoutes = require('./commentRoutes');
 
 //Tells the system to go into the userRoutes.js if /users is in the file path
 router.use('/users', userRoutes);

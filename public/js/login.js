@@ -5,21 +5,21 @@ submitBtn.click(function(e) {
     e.preventDefault();
   
     // Gather the data from the form elements on the page
-    const email = document.querySelector('.email-login').value.trim();
+    const username = document.querySelector('.username-login').value.trim();
     const password = document.querySelector('.password-login').value.trim();
-  
-    if (email && password) {
-      // Send the e-mail and password to the server
+    console.log(username + " " + password);
+    if (username && password) {
+      // Send the username and password to the server
       const response = fetch('/api/users/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
-    //   if (response.ok) {
+      if (response.ok) {
         document.location.replace('/');
-    //   } else {
-    //     alert('Failed to log in');
-    //   }
+      } else {
+        alert('Failed to log in');
+      }
     }
 });
