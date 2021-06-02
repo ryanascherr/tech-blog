@@ -216,7 +216,7 @@ button:hover {
     padding: 10px;
     font-size: x-large;
     border-radius: 15px;
-    border: none;
+    border: 2px solid var(--light-green);
 }
 
 .new-post-btn:hover {
@@ -245,4 +245,10 @@ button:hover {
 
 .previous-post-title a:hover {
     text-decoration: underline;
+}
+
+.new-post-content {
+    width: 100%;
+    padding: 10px;
+    font-size: x-large;
 }
