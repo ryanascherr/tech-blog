@@ -124,7 +124,8 @@ button:hover {
 
 .comment-header {
     background-color: var(--brown);
-    height: 42px;
+    color: var(--light-green);
+    padding: 10px;
 }
 
 .comment-submit-box {

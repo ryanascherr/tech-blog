@@ -2,7 +2,7 @@
     <div class="post">
         <div class="post-title">
             <a href="/post/{{posts.id}}"><h3>{{posts.title}}</h3></a>
-            <h5>Posted by {{posts.user.name}} on {{posts.date_created}}</h5>
+            <h5>Posted by {{posts.user.username}} on {{posts.date_created}}</h5>
         </div>
         <div class="post-content">
             <p>{{posts.content}}</p>
@@ -10,24 +10,30 @@
     </div>
 </div>
 
+{{#if logged_in}}
 <div class="create-comment-container">
     <div class="comment-header"></div>
     <div class="create-comment-body">
         <p>Comment</p>
-        <textarea name="" id="" cols="30" rows="5"></textarea>
+        <textarea cols="30" rows="5" class="comment-field"></textarea>
         <div class="comment-submit-box">
-            <button class="comment-submit-btn">Submit</button>
+            <button class="comment-submit-btn" data-id="{{posts.id}}">Submit</button>
         </div>
     </div>
 </div>
-
+{{/if}}
+<h1>{{user.username}}</h1>
 <div class="all-comments">
-    <div class="comment-header"></div>
+    <div class="comment-header"><h3>Comments</h3></div>
     {{#each posts.comments as |comment|}}
     <div class="comment">
         <p>{{comment.content}}</p>
         <br>
-        <p>-User, {{comment.date_created}}</p>
+        <p>-{{comment.id}}, {{comment.date_created}}</p>
     </div>
     {{/each}}
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="/js/comment.js"></script>
