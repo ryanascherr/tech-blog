@@ -203,3 +203,46 @@ button:hover {
 .go-to-signup:hover, .go-to-login:hover {
     cursor: pointer;
 }
+
+.new-post-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.new-post-btn {
+    background-color: var(--brown);
+    color: white;
+    padding: 10px;
+    font-size: x-large;
+    border-radius: 15px;
+    border: none;
+}
+
+.new-post-btn:hover {
+    background-color: white;
+    color: var(--brown);
+    border: 2px solid var(--brown);
+}
+
+.previous-post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--gray);
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.previous-post-title a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+.previous-post-title a:hover {
+    text-decoration: underline;
+}
