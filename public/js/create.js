@@ -54,11 +54,25 @@ $(".click").click(function() {
 $(".delete-post").click(async (e) => {
     const response = await fetch(`/api/posts/${postId}`, {
         method: 'DELETE',
+        body: JSON.stringify({ postTitle, postContent }),
       });
   
       if (response.ok) {
         document.location.replace('/dashboard');
       } else {
         alert('Failed to delete post');
+      }
+})
+
+$(".update-post").click(async (e) => {
+    const response = await fetch(`/api/posts/${postId}`, {
+        method: 'UPDATE',
+        body: JSON.stringify({ postTitle, postContent }),
+      });
+  
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to update post');
       }
 })
