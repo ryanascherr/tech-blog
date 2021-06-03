@@ -40,18 +40,18 @@ router.post('/', async (req, res) => {
 //delete route, to destroy issues, requires authentication
 router.delete('/:id', async (req, res) => {
   try {
-    const deletedIssue = await Issue.destroy({
+    const deletedPost = await Post.destroy({
       where: {
         id: req.params.id,
         // user_id: req.session.user_id,
       },
 });
-    if (!deletedIssue) {
+    if (!deletedPost) {
       res.status(404).json({ message: 'No issue found with this id!' });
       return;
     }
 
-    res.status(200).json(deletedIssue);
+    res.status(200).json(deletedPost);
   } catch (err) {
     res.status(500).json(err);
   }

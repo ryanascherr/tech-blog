@@ -14,7 +14,7 @@
             </div>
             <div class="password">
                 <p>Content</p>
-                <textarea name="" id="" cols="30" rows="5" class="password-signup new-post-content new-post-content"></textarea>
+                <textarea name="" id="" cols="30" rows="5" class="password-signup new-post-content"></textarea>
             </div>
             <div class="login-signup-box">
                 <button class="signup-btn create-new-post">Create!</button>
@@ -31,14 +31,15 @@
         <div class="login-signup-body">
             <div class="username">
                 <p>Title</p>
-                <input type="text" class="username-signup new-post-title">
+                <input type="text" class="username-signup old-post-title">
             </div>
             <div class="password">
                 <p>Content</p>
-                <textarea name="" id="" cols="30" rows="5" class="password-signup new-post-content new-post-content"></textarea>
+                <textarea name="" id="" cols="30" rows="5" class="password-signup  old-post-content"></textarea>
             </div>
             <div class="login-signup-box">
-                <button class="signup-btn create-new-post">Create!</button>
+                <button class="signup-btn update-post">Update Post</button>
+                <button class="signup-btn delete-post">Delete</button>
             </div>
         </div>
     </div>
@@ -51,7 +52,7 @@
     {{#each posts as |post|}}
     <div class="previous-post">
         <div class="previous-post-title">
-            <a class="click" data-id="{{id}}" href="#"><p>{{post.title}}</p></a>
+            <a class="click" data-id="{{id}}" data-title="{{post.title}}" data-content="{{post.content}}" href="#"><p>{{post.title}}</p></a>
         </div>
         <div class="previous-post-user">
             <p class="italic">{{post.date_created}}</p>

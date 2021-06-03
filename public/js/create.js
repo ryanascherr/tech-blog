@@ -1,4 +1,8 @@
 const submitBtn = $(".create-new-post");
+
+let postID;
+let postTitle;
+let postContent;
 //make async
 submitBtn.click(async (e) => {
     e.preventDefault();
@@ -33,12 +37,28 @@ submitBtn.click(async (e) => {
 })
 
 $(".new-post-btn").click(function() {
+    $(".edit-delete-post-parent").addClass("hidden");
     $(".new-post-parent").removeClass("hidden");
   })
 
 $(".click").click(function() {
     postId = this.getAttribute('data-id');
-    console.log(postId);
+    postTitle = this.getAttribute('data-title');
+    postContent = this.getAttribute('data-content');
+    $(".old-post-title").val(postTitle);
+    $(".old-post-content").val(postContent);
+    $(".all-posts").addClass("hidden");
+    $(".edit-delete-post-parent").removeClass("hidden");
+})
 
-
+$(".delete-post").click(async (e) => {
+    const response = await fetch(`/api/posts/${postId}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.replace('/dashboard');
+      } else {
+        alert('Failed to delete post');
+      }
 })
