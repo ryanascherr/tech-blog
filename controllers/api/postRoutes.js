@@ -57,29 +57,28 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
-  try {
-    const updatedPost = await Post.update(
-      {
-        title: postTitle,
-        content: postContent,
-      },
-      {
-      where: {
-        id: req.params.id,
-        // user_id: req.session.user_id,
-      },
-    });
-    if (!updatedPost) {
-      res.status(404).json({ message: 'No post found with this id!' });
-      return;
-    }
+// router.put('/:id', async (req, res) => {
+//   console.log("Hello!");
+//   try {
+//     const updatedPost = await Post.update(
+//       {
+//         title: req.body.postTitle,
+//         content: req.body.postContent,
+//       },
+//       {
+//       where: {
+//         id: 2,
+//         // user_id: req.session.user_id,
+//       },
+//     }
+//   )
+//     .then((updatedBook) => {
+//       // Sends the updated book as a json response
+//       res.json(updatedBook);
+//     })
+//     .catch((err) => res.json(err));
 
-    res.status(200).json(updatedPost);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// });
 
 // router.put('/:id', async (req, res) => {
 //   try {
@@ -101,6 +100,28 @@ router.put('/:id', async (req, res) => {
 //     .catch((err) => res.json(err));
 // }
 // })
+
+router.put('/:id', (req, res) => {
+  // Calls the update method on the Book model
+  Post.update(
+    {
+      // All the fields you can update and the data attached to the request body.
+      title: req.body.postTitle,
+      content: req.body.postContent,
+    },
+    {
+      // Gets the books based on the isbn given in the request parameters
+      where: {
+        id: 2,
+      },
+    }
+  )
+    .then((updatedPost) => {
+      // Sends the updated book as a json response
+      res.json(updatedPost);
+    })
+    .catch((err) => res.json(err));
+});
 
 
 
