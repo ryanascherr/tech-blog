@@ -55,7 +55,7 @@
             <a class="click" data-id="{{id}}" data-title="{{post.title}}" data-content="{{post.content}}" href="#"><p>{{post.title}}</p></a>
         </div>
         <div class="previous-post-user">
-            <p class="italic">{{post.date_created}}</p>
+            <p class="italic">Posted on {{format_date post.date_created}}</p>
         </div>
     </div>
     {{/each}}

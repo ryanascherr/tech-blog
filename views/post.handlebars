@@ -2,7 +2,7 @@
     <div class="post">
         <div class="post-title">
             <a href="/post/{{posts.id}}"><h3>{{posts.title}}</h3></a>
-            <h5>Posted by {{posts.user.username}} on {{posts.date_created}}</h5>
+            <h5>Posted by {{posts.user.username}} on {{format_date posts.date_created}}</h5>
         </div>
         <div class="post-content">
             <p>{{posts.content}}</p>
@@ -28,7 +28,7 @@
     <div class="comment">
         <p>{{comment.content}}</p>
         <br>
-        <p>-{{comment.user.username}}, {{comment.date_created}}</p>
+        <p>-{{comment.user.username}}, {{format_date comment.date_created}}</p>
     </div>
     {{/each}}
 </div>
