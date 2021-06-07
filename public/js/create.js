@@ -65,18 +65,18 @@ $(".delete-post").click(async (e) => {
 })
 
 $(".update-post").click(async (e) => {
-    // postId = this.getAttribute('data-id');
+    postId = $(this).attr('data-id');
     postTitle = $(".old-post-title").val();
     postContent = $(".old-post-content").val();
     console.log(postTitle);
     console.log(postContent);
-    const response = await fetch(`/api/posts/2`, {
+    const response = await fetch(`/api/posts/20`, {
         method: 'PUT',
-        body: JSON.stringify({ postTitle, postContent }),
+        body: JSON.stringify({ "title": postTitle, "content": postContent }),
       });
   
       if (response.ok) {
-        // document.location.replace('/dashboard');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to update post');
       }

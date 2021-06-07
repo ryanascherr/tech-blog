@@ -4,21 +4,21 @@ const { Post } = require('../../models');
 
 //get route to find all issues
 router.get('/', async (req, res) => {
-  const issuesData = await Issue.findAll().catch((err) => { 
+  const postsData = await Post.findAll().catch((err) => { 
       res.json(err);
     });
-      res.json(issuesData);
+      res.json(postsData);
 });
 
 //get route to search for issues, based on ID
 router.get('/:id', async (req, res) => {
-  const issueData = await Issue.findByPk(req.params.id, {
+  const postData = await Post.findByPk(req.params.id, {
   });
-  if (!issueData) {
+  if (!postData) {
     res.status(404).json({ message: 'No issue found with this id!' });
     return;
   }
-      res.json(issueData);
+    res.json(postData);
 });
 
 
@@ -57,72 +57,22 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// router.put('/:id', async (req, res) => {
-//   console.log("Hello!");
-//   try {
-//     const updatedPost = await Post.update(
-//       {
-//         title: req.body.postTitle,
-//         content: req.body.postContent,
-//       },
-//       {
-//       where: {
-//         id: 2,
-//         // user_id: req.session.user_id,
-//       },
-//     }
-//   )
-//     .then((updatedBook) => {
-//       // Sends the updated book as a json response
-//       res.json(updatedBook);
-//     })
-//     .catch((err) => res.json(err));
-
-// });
-
-// router.put('/:id', async (req, res) => {
-//   try {
-//     const updatedPost = await Post.update(
-//     {
-//       title: req.body.postTitle,
-//       content: req.body.postContent,
-//     },
-//     {
-//       where: {
-//         id: req.params.id,
-//       },
-//     }
-//     )
-//     .then((updatedPost) => {
-//       // Sends the updated book as a json response
-//       res.json(updatedPost);
-//     })
-//     .catch((err) => res.json(err));
-// }
-// })
-
-router.put('/:id', (req, res) => {
-  // Calls the update method on the Book model
-  Post.update(
-    {
-      // All the fields you can update and the data attached to the request body.
-      title: req.body.postTitle,
-      content: req.body.postContent,
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedPost = await Post.update(req.body,
+  {
+    where: {
+      id: req.params.id,
     },
-    {
-      // Gets the books based on the isbn given in the request parameters
-      where: {
-        id: 2,
-      },
-    }
-  )
-    .then((updatedPost) => {
-      // Sends the updated book as a json response
-      res.json(updatedPost);
-    })
-    .catch((err) => res.json(err));
+  });
+  if (!updatedPost) {
+    res.status(404).json({ message: 'No post found with this id!' });
+    return;
+  }
+    res.status(200).json(updatedPost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
-
-
 
 module.exports = router;
