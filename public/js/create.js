@@ -69,6 +69,7 @@ $(".update-post").click(async (e) => {
     console.log(postId);
     console.log(postTitle);
     console.log(postContent);
+    
     const response = await fetch(`/api/posts/${postID}`, {
         method: 'PUT',
         body: JSON.stringify({ "title": postTitle, "content": postContent }),
