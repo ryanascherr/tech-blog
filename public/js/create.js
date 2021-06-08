@@ -1,9 +1,9 @@
 const submitBtn = $(".create-new-post");
 
-let postID;
-let postTitle;
-let postContent;
-//make async
+let postID = "";
+let postTitle = "";
+let postContent = "";
+
 submitBtn.click(async (e) => {
     e.preventDefault();
     
@@ -27,13 +27,6 @@ submitBtn.click(async (e) => {
       
       const data = await response.json();
       document.location.replace(`/post/${data.id}`);
-      // console.log(data);
-    //This works, but not like it should. Need to look into this later.
-    //   if (response.ok) {
-    //     document.location.replace('/');
-    //   } else {
-    //     alert("oops");
-    //   }
 })
 
 $(".new-post-btn").click(function() {
@@ -45,8 +38,14 @@ $(".click").click(function() {
     postId = this.getAttribute('data-id');
     postTitle = this.getAttribute('data-title');
     postContent = this.getAttribute('data-content');
+
+    console.log("This is the post id: " + postId);
+    console.log(postTitle);
+    console.log(postContent);
+
     $(".old-post-title").val(postTitle);
     $(".old-post-content").val(postContent);
+
     $(".all-posts").addClass("hidden");
     $(".edit-delete-post-parent").removeClass("hidden");
 })
@@ -65,18 +64,19 @@ $(".delete-post").click(async (e) => {
 })
 
 $(".update-post").click(async (e) => {
-    postId = $(this).attr('data-id');
     postTitle = $(".old-post-title").val();
     postContent = $(".old-post-content").val();
+    console.log(postId);
     console.log(postTitle);
     console.log(postContent);
-    const response = await fetch(`/api/posts/20`, {
+    const response = await fetch(`/api/posts/${postID}`, {
         method: 'PUT',
         body: JSON.stringify({ "title": postTitle, "content": postContent }),
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.reload();
+        console.log("success!");
       } else {
         alert('Failed to update post');
       }
