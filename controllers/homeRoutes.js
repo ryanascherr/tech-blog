@@ -45,7 +45,7 @@ router.get('/dashboard', async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    console.table(user);
+    // console.table(user);
     res.render('dashboard', {
       ...user,
       logged_in: true

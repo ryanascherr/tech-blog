@@ -1,6 +1,6 @@
 const submitBtn = $(".create-new-post");
 
-let postID = "";
+let postId = "";
 let postTitle = "";
 let postContent = "";
 
@@ -69,8 +69,8 @@ $(".update-post").click(async (e) => {
     console.log(postId);
     console.log(postTitle);
     console.log(postContent);
-    
-    const response = await fetch(`/api/posts/${postID}`, {
+
+    const response = await fetch(`/api/posts/${postId}`, {
         method: 'PUT',
         body: JSON.stringify({ "title": postTitle, "content": postContent }),
       });

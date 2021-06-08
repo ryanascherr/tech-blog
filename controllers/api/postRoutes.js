@@ -58,6 +58,8 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+  console.log("HEELO THIS IS A CONSOLE LOG");
+  console.log(req.params.id);
   try {
     const updatedPost = await Post.update(req.body,
   {
@@ -71,6 +73,7 @@ router.put('/:id', async (req, res) => {
   }
     res.status(200).json(updatedPost);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
