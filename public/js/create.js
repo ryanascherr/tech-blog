@@ -57,7 +57,7 @@ $(".delete-post").click(async (e) => {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.reload();
       } else {
         alert('Failed to delete post');
       }
