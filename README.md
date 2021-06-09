@@ -44,7 +44,7 @@ All contributions are welcome!
 
 ## Link
 
-https://ryanascherr.github.io/tech-blog/
+https://whispering-sea-48503.herokuapp.com/
 
 ## Questions
 
