@@ -58,8 +58,6 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-  console.log("HELLO THIS IS A CONSOLE LOG");
-  console.log(req.params.id);
   try {
     const updatedPost = await Post.update(req.body,
   {
@@ -67,7 +65,7 @@ router.put('/:id', async (req, res) => {
       id: req.params.id,
     },
   });
-  console.log(req.body);
+  
     if (!updatedPost) {
       res.status(404).json({ message: 'No post found with this id!' });
       return;

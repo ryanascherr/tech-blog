@@ -66,9 +66,6 @@ $(".delete-post").click(async (e) => {
 $(".update-post").click(async (e) => {
     postTitle = $(".old-post-title").val();
     postContent = $(".old-post-content").val();
-    console.log(postId);
-    console.log(postTitle);
-    console.log(postContent);
 
     const response = await fetch(`/api/posts/${postId}`, {
         method: 'PUT',
@@ -79,8 +76,7 @@ $(".update-post").click(async (e) => {
       });
   
       if (response.ok) {
-        // document.location.reload();
-        console.log("success!");
+        document.location.reload();
       } else {
         alert('Failed to update post');
       }
