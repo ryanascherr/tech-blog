@@ -31,6 +31,9 @@ To run tests, run the following command:
 
 Users can view all posts on the homepage, including when it was posted and by whom. By clicking on a post, a user can view the post on its own page as well as any associated comments. Once a user logs in or signs up, they can make comments on others' posts. In addition, they have access to their dashboard, where they can view all of their own posts, create new posts, or edit and/or delete old posts.
 
+![Tech Blog](public/img/tech-blog-pic-1.png)
+![Tech Blog](public/img/tech-blog-pic-2.png)
+
 ## License
 
 This application is covered under the following license: None
