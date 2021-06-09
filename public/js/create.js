@@ -73,10 +73,13 @@ $(".update-post").click(async (e) => {
     const response = await fetch(`/api/posts/${postId}`, {
         method: 'PUT',
         body: JSON.stringify({ "title": postTitle, "content": postContent }),
+        headers: {
+          'Content-Type': 'application/json',
+        },  
       });
   
       if (response.ok) {
-        document.location.reload();
+        // document.location.reload();
         console.log("success!");
       } else {
         alert('Failed to update post');
