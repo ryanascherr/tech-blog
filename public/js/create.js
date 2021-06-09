@@ -26,7 +26,7 @@ submitBtn.click(async (e) => {
 
       
       const data = await response.json();
-      document.location.replace(`/post/${data.id}`);
+      document.location.reload();
 })
 
 $(".new-post-btn").click(function() {
