@@ -1,13 +1,17 @@
+:root {
+    --brown: #221010;
+    --light-green: #D9E9D3;
+    --gray: #A7A7A7;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --brown: #221010;
-    --light-green: #D9E9D3;
-    --gray: #A7A7A7;
+body {
+    background-color: var(--light-green);
 }
 
 header {
@@ -26,14 +30,13 @@ nav a {
     color: var(--light-green);
 }
 
-body {
-    background-color: var(--light-green);
-}
-
 button:hover {
     cursor: pointer;
 }
 
+.hidden {
+    display: none;
+}
 
 .title {
     color: var(--brown);
@@ -181,10 +184,6 @@ button:hover {
 .login-signup-body a {
     color: var(--brown);
     font-size: x-large;
-}
-
-.hidden {
-    display: none;
 }
 
 .go-to-signup, .go-to-login {
