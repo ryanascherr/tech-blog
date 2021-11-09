@@ -54,7 +54,6 @@ button:hover {
     position: absolute;
     bottom: 25px;
     background-color: var(--gray);
-    /* height: 57px; */
     z-index: 1;
     border-radius: 10px;
     width: 25%;
@@ -87,7 +86,7 @@ button:hover {
 
 .post-title a {
     text-decoration: none;
-    color: var(--light-green)
+    color: var(--gray);
 }
 
 .post-title a:hover {
@@ -184,14 +183,6 @@ button:hover {
     font-size: x-large;
 }
 
-/* .login-signup-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: x-large;
-    border: none;
-    background-color: gray;
-} */
-
 .hidden {
     display: none;
 }
@@ -234,7 +225,6 @@ button:hover {
     padding: 10px;
     border-radius: 10px;
     color: white;
-
 }
 
 .previous-post-title a {
